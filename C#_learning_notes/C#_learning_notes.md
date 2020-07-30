@@ -239,13 +239,39 @@ C# 中数组访问越界是非法的，会被编译器检测报错。
 
 #### Indexers 索引器
 
+使用 **this** 关键字，指向对象实例
+
 ```c#
-public element-type this[int index]{
+static public int size = 10;
+private string[] namelist = new string[size];
+public string this[int index]{
     get{
-        
+        return namelist[index];
     }
     set{
-        
+        namelist[index] = value;
+    }
+}
+```
+
+
+
+Indexer可以重载，除了整型，也可以是其他类型如string
+
+```C#
+static public int size = 10;
+private string[] namelist = new string[size];
+public string this[int index]{
+    ...;
+}
+
+public int this[string name]{
+    get{
+        for(int i=0; i < size; i++){
+            if(namelist[i] == name){
+                return i;
+            } 
+        }
     }
 }
 ```
@@ -255,6 +281,16 @@ public element-type this[int index]{
 
 
 #### Boxing and unboxing
+
+C# 中的所有数据类型都来自object类
+
+将一个变量instance包裹进object称为boxing，将包裹在object中的变量instance取出称为unboxing
+
+```c#
+int exampleInt = 10;
+object objBox = exampleInt	//boxing
+int unboxInt = (int) objBox;	//unboxing
+```
 
 
 
