@@ -155,3 +155,127 @@ ExampleFunc(i,j);
 template void ExampleFunc<int>(int,int);
 ```
 
+
+
+## UIH C++编码规范
+
+### 定义和缩略语/Definition and Abbreviation
+
+除变量/形参 外使用Pascal命名法：每一个单词的首字母都采用大写字母
+
+```c++
+void FirstNameFunc(){
+    ...;
+}
+```
+
+
+
+### 描述/Description
+
+#### 通用规则
+
+##### 面向对象
+
+避免使用C语言的语法,e.g.
+
+- std::string	~~char~~
+- new delete 	~~malloc free~~
+
+
+
+##### 避免简单的复制粘贴代码
+
+附带的问题不可控不可预期
+
+
+
+##### 通用的资源管理
+
+- 需要使用时再分配资源，不再使用需及时释放
+
+- 资源指 内存、文件句柄、socket和端口、数据库连接、锁和光标等
+
+- 尽晚分配，尽早释放
+
+- 涉及到分配资源时做异常处理
+
+  ```C++
+  try{
+      //	allocate resource
+  }
+  catch(Exception){
+      //	handle exception
+  }
+  ```
+
+
+
+##### 通用的内存分配
+
+- 避免使用全局变量，可使用全局函数或者静态成员函数返回全局变量
+
+  ```c++
+  class FileSystem{...};
+  
+  FileSystem TFS(){
+  	static FileSystem theFileSystem;
+      return theFileSystem;
+  }
+  ```
+
+- 自己申请的内存自己负责释放，不要期望其他人之后完成释放的工作
+
+- <span style ="color:red"> 如果内存是内部分配的，需要提供额外的方法来释放内存。避免一个动态库分配的内存在另一个动态库中释放带来的问题。</span>
+
+- 避免比较指针，除判断是否为空外
+
+  ```c#
+  if(NULL == p)
+  //	== 判断语句变量放在右边，防止错误赋值操作
+  ```
+
+- 释放数组时，使用delete[]
+
+  ```C++
+  delete[] p;	//	p points to an array
+  p = NULL;
+  ```
+
+- 释放完内存，将指针赋值为空
+
+- 使用智能指针，避免内存泄漏
+
+  - unique_ptr	同一时间内只有一个智能指针可以指向该对象
+  - shared_ptr 多个智能指针可以指向相同对象，最后一个引用注销时释放资源
+  - weak_ptr 不控制对象生命周期，从一个shared_ptr或者另一个weak_ptr构造，其构造和析构不会造成引用计数增减。
+
+- 在循环体外声明变量
+
+- 不要在栈上放大量数据，用堆来分配大的数据
+
+  ```c++
+  ExampleClass exaArray[10000];	//	stack,wrong
+  
+  std::unique_ptr<ExampleClass[]> pExaArray(new ExampleClass[10000])	//	heap,right
+  ```
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+### 参考reference
+
+> [1] Effective C++ [1] 3rd Edition
+>
+> [2] C++ Coding Standards: 101 Rules, Guidelines and Best Practices, SutterHerb Sutter , et.al et.al et.al.
