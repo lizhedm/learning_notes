@@ -257,14 +257,51 @@ void FirstNameFunc(){
   ```c++
   ExampleClass exaArray[10000];	//	stack,wrong
   
-  std::unique_ptr<ExampleClass[]> pExaArray(new ExampleClass[10000])	//	heap,right
+  std::unique_ptr<ExampleClass[]> pExaArray(new ExampleClass[10000]);	//	heap,right
   ```
 
-  
-
-  
 
 
+##### 智能指针
+
+-  少用裸指针，用智能指针替代
+- 禁止使用auto_ptr, C++11废弃了auto_ptr
+- 一般情况下，unique_ptr足够使用
+- 使用std::make_unique和std::make_shared，不直接使用new
+
+
+
+##### No魔法数
+
+使用有意义的标识，而不是无意义的数字
+
+可读性差，难以维护
+
+
+
+##### 警告级别
+
+警告级别设置4，将警告视为错误
+
+
+
+#### 头文件
+
+##### #define保护
+
+防止头文件被多重包含
+
+```C++
+#ifndef XXX
+#define XXX
+#endif
+```
+
+
+
+##### 头文件依赖
+
+使用前置声明，减少不必要的使用 #include包含头文件
 
 
 
