@@ -195,7 +195,19 @@ C# 中多继承通过Interface来实现
 
 #### Function parameters
 
+##### By-Value/In parameters
 
+参数以值得方式传入函数内部
+
+
+
+##### By Reference/In-Out parameters
+
+
+
+
+
+##### Out parameters
 
 
 
