@@ -186,11 +186,115 @@ Class Date{
 
 
 
-#### Interfaces
+#### Interfaces 接口
 
 C# 没有C++中的多类继承 multiple class inheritance
 
 C# 中多继承通过Interface来实现 
+
+
+
+##### 定义
+
+接口：包含一组虚方法的抽象类型，每一种方法都有名称、参数和返回值。但是没有任何实现
+
+```C#
+public interface System.IComparable{
+    int CompareTo(object o);
+}
+
+public class TestCls: IComparable{
+    public TestCls(){
+    
+    }
+
+    private int _value;
+    public int Value{
+        get { return _value; }
+        set { _value = value; }
+    }
+
+   public int CompareTo(object o){
+        //	使用as模式进行转型判断
+        TestCls aCls = o as TestCls;
+        if (aCls != null){
+        	//	实现抽象方法
+        	return _value.CompareTo(aCls._value);
+        }
+    }
+}
+```
+
+
+
+
+
+#### Abstract Class 抽象类
+
+##### 定义
+
+- 抽象类提供多个派生类共享基类的公共定义，它既可以提供抽象方法，也可以提供非抽象方法
+
+- 抽象类不能实例化，必须通过继承由派生类实现其抽象方法， 因此对抽象类不能使用new关键字，也不能被密封
+
+- 如果派生类没有实现所有的抽象方法，则该派生类也必须声明为抽象类
+
+- 实现抽象方法由 override来实现
+
+  
+
+```C#
+abstract public class Animal{
+    //	定义静态字段
+    static protected int _id; 
+    //	定义属性
+    public abstract static int Id{
+        get;
+        set;
+    }
+
+    public abstract void Eat();
+
+    //	索引器
+    public string this[int i]{
+        get;
+        set;
+    } 
+}
+```
+
+```c#
+public class Dog: Animal{
+    public static override int Id{
+        get {return _id;}
+        set {_id = value;}
+    }
+
+    public override void Eat(){
+        Console.Write("Dog Eats.")
+    }
+}
+```
+
+
+
+#### 接口和抽象类对比
+
+##### 相同点
+
+- 都不能被直接实例化，都可以通过继承实现其抽象方法
+- 都是面向抽象编程的技术基础，实现了诸多的设计模式
+
+
+
+##### 不同点
+
+- 接口支持多继承，抽象类不能实现多继承
+- 接口只能定义抽象规则；抽象类既可以定义规则，还可能提供已实现的成员
+- 接口是一组行为规范；抽象类是一个不完全的类
+- 接口可以用于支持回调；抽象类不能实现回调，因为继承不支持
+- 接口只包含方法、属性、索引器、事件的签名，但不能定义字段和包含实现的方法；抽象类可以定义字段、属性、包含有实现的方法
+- 接口可以作用于值类型和引用类型；抽象类只能作用于引用类型。例如，Struct就可以继承接口，而不能继承类
 
 
 
