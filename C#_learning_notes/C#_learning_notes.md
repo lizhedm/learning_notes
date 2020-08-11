@@ -302,17 +302,68 @@ public class Dog: Animal{
 
 ##### By-Value/In parameters
 
-参数以值得方式传入函数内部
+参数以值的方式传入函数内部，传递的是值得拷贝，函数中值被改变，函数外这个值是不变的
 
 
 
 ##### By Reference/In-Out parameters
 
+参数以指针pointer或者引用reference的方式传入函数内部，传递的是地址，函数中值被改变，函数外这个值也会被改变1
 
+<u>在使用之前必须赋初始值</u>，不能传递一个未初始化的reference参数进入函数
+
+C# 使用关键字 **ref**
+
+```c#
+void ExampleFunc(ref int exampleValue){
+    ...;
+}
+
+int exampleValue = 1;
+ExampleFunc(ref exampleValue);
+```
 
 
 
 ##### Out parameters
+
+<u>在使用完返回时必须赋值</u>
+
+函数只有一个返回值，需要输出多个值时，可以使用out参数
+
+```C#
+int GetValueA(out int valueB){
+    int a;
+    int b;
+    ...;	//	do something about a and b
+    valueA = a;
+    valueB = b;
+    return valueA;
+}
+```
+
+
+
+##### Params 参数数组
+
+- 用于修饰方法的参数，只能修饰一维数组
+
+- 一个方法只能有一个params参数数组，切位于函数参数项最后，不能有默认值
+
+- 调用函数时，可以传参数数组，也可以分开传数组各元素
+
+  ```c#
+  ExampleFunc(string param1,params int[] paramsArray){
+      ...;
+  }
+  
+  int[] paramsArray = new int[]{1,2,3,4,5,6};
+  string strParam = "test";
+  ExampleFunc(strParam,paramsArray);	//	传参数数组
+  ExampleFunc(strParam,7,8,9);	//	传数组各元素
+  ```
+
+  
 
 
 
@@ -418,3 +469,13 @@ int unboxInt = (int) objBox;	//unboxing
 
 
 #### Inheritance and polymorphism
+
+
+
+### UIH C# 编码规范
+
+
+
+#### Reference
+
+> Clean Code 代码整洁之道
