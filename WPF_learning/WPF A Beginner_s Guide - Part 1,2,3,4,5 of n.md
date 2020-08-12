@@ -132,7 +132,7 @@ What else do we need to know about a Canvas control and its children? Well, actu
 
 Let's see an example of this, shall we? The following picture shows a Canvas control with two children, one on top of the other. This is taken from the file called _CanvasDEMO.xaml_ in the attached demo project.
 
-![](resource\picture_1.png)
+![picture_1_1](resource\picture_1_1.png)
 
 So how does this look in code? Well, in XAML, it is as follows:
 
@@ -236,7 +236,7 @@ The StackPanel control is also very easy to use. It simply stacks its contents, 
 
 Let's see an example of this, shall we? The following picture shows a StackPanel control with two children, one on top of the other. This is taken from the file called _StackPanelDEMO.xaml_ in the attached demo project.
 
-![](\resource\picture_2.png)
+![picture_1_2](\resource\picture_1_2.png)
 
 So how does this look in code? Well in XAML, it is as follows:
 
@@ -313,7 +313,7 @@ The WrapPanel control, again, is very easy to use (are you seeing a pattern here
 
 Let's see an example of this, shall we? The following picture shows a WrapPanel control with 10 children. This is taken from the file called _WrapPanelDEMO.xaml_ in the attached demo project.
 
-![](resource\picture_3.png)
+![picture_1_3](resource\picture_1_3.png)
 
 So how does this look in code? Well in XAML, it is as follows:
 
@@ -414,7 +414,7 @@ This property may be set to Left/Right/Top/Bottom. There is one further property
 
 Let's see an example of this, shall we? The following picture shows a DockPanel control with two children, one docked to the top, and the other docked to fill the remaining available area. This is taken from the file called _DockPanelDEMO.xaml_ in the attached demo project.
 
-![](resource\picture_4.png)
+![picture_1_4](resource\picture_1_4.png)
 
 
 
@@ -527,7 +527,7 @@ By clever usage of a Grid control, you should almost be able to mimic any of the
 
 Let's see an example of the Grid control, shall we? The following picture shows a Grid control with three columns and a row, where there are two children. The first child occupies column 1, and the second child occupies columns 2-3 as its Grid.ColumnSpan is set to 2. This is taken from the file called _GridDEMO.xaml_ in the attached demo project.
 
-![](resource\picture_5.png)
+![picture_1_5](resource\picture_1_5.png)
 
 
 
@@ -648,11 +648,11 @@ As I say, the Grid control is quite sophisticated, so I urge you to explore this
 
 So now we can put all this good knowledge together and we could create something as beautiful as this:
 
-![](resource\picture_6.png)
+![picture_1_6](resource\picture_1_6.png)
 
 No... only joking, I think the best thing to do here is, let's say I have some hypothetical layout that I want to achieve. Let's say one of the common layouts, favoured for years, where we have a menu bar at the top, followed by a main content area, and a status bar area at the bottom. Let's see a mock up (designed as a simple WinForm) of what we are aiming for:
 
-![](resource\picture_7.png)
+![picture_1_7](resource\picture_1_7.png)
 
 
 
@@ -733,7 +733,7 @@ In case you are wondering (lost **** it), here is how I did it (XAML only this t
 
 Which resulted in the following Window:
 
-![](resource\picture_8.png)
+![picture_1_8](resource\picture_1_8.png)
 
 
 
@@ -899,7 +899,7 @@ This is the easiest of the four methods to reference classes within XAML. As the
 
 Let's say, the current application I am working with has a namespace of "WPF\_Tour\_Beginners\_Part\_2" and that this is also the name of the generated Assembly. And that we have a UserControl called UserConrtrol2 in this namespace:
 
-![](resource\picture_9.png)
+![picture_2_1](resource\picture_2_1.png)
 
 
 
@@ -941,7 +941,7 @@ This is pretty much the same steps as we just followed for a local UserControl. 
 
 Let's say the current application I am working with has a namespace of "WPF\_Tour\_Beginners\_Part\_2" and that this is also the name of the generated Assembly. And that we have a custom class called LocalClass in this namespace:
 
-![](resource\picture_10.png)
+![picture_2_2](resource\picture_2_2.png)
 
 
 
@@ -976,7 +976,7 @@ So what about that? We've instantiated a LocalClass object in XAML now, and set 
 
 So if we wanted to, we could use the instantiated instance of this LocalClass class in the code-behind; we can simply grab the Resource and use the instantiated object as if it had been created and added to the heap in the code-behind using the new keyword. Let's see this; again, it is a Resource thing (sorry for jumping ahead), but I think it's a fairly useful thing to demonstrate.
 
-![](resource\picture_11.png)
+![picture_2_3](resource\picture_2_3.png)
 
 
 
@@ -988,7 +988,7 @@ Well, it's not that different from what we saw earlier; the only addition to the
 
 Let's say the current application I am working with has a namespace of "WPF\_Tour\_Beginners\_Part\_2" and that we are trying to reference a third party Assembly ("_SeperateWPFUserControl_Dll_" in the demo app) and that the third party Assembly contains a UserControl called "UserControl1":
 
-![](resource\picture_12.png)
+![picture_2_4](resource\picture_2_4.png)
 
 
 
@@ -1538,7 +1538,7 @@ It is fairly common for one logical event to be represented by two actual events
 
 In order to understand them further, I have provided as part of the overall demo solution (at the top of this article) a project entitled "Part3_RoutedEventViewer" which is a standard WPF application, that when run can be used to examine WPF commands. When the application is launched, it should resemble something like the following:
 
-![](resource\picture_13.png)
+![picture_3_1](resource\picture_3_1.png)
 
 
 
@@ -1884,7 +1884,7 @@ End Class
 
 It can be seen that this _Window1.xaml_ has a VisualTree, which is as follows:
 
-![](resource\picture_14.png)
+![picture_3_2](resource\picture_3_2.png)
 
 
 
@@ -1892,11 +1892,11 @@ So with this in mind, let me now show you some example screenshots that were gen
 
 If we click the Window, we can observe the following events are seen. We only see Window level events; this is due to the Window being the root element in the Visual Tree.
 
-![](resource\picture_15.png)
+![picture_3_3](resource\picture_3_3.png)
 
 But if we click the actual button (on the left), we can observe the following events are seen, as the Button is a sibling of the Grid, which in turn is a sibling of Window1.
 
-![](resource\picture_16.png)
+![picture_3_4](resource\picture_3_4.png)
 
 I hope this helps you better understand how RoutedEvents traverse the Visual Tree.
 
@@ -1979,6 +1979,8 @@ I have attached another demo project (entitled "Part3_RoutedEventsExample") whic
 2.  How to create and consume a RoutedEvent that uses custom RoutedEventArgs
 
 When this application is run, it looks like the following figure:
+
+![picture_3_5](resource/picture_3_5.png)
 
 Where there is a single UserControl placed Window1. The UserControl is responsible for raising two events that Window1 subscribes to. We just discussed the different manners in which to subscribe to RoutedEvents, so I won't dwell on that, but shall instead show you how to raise your own RoutedEvent.
 
@@ -2337,7 +2339,7 @@ Using these inbuilt Commands, it is possible to construct some pretty elaborate 
 
 See how all we need to do is on the `Button`s, provide a Command, such as Cut. And that's enough to get the Cut functionality with the currently focused item. This is what this small demo application looks like:
 
-![Image 6](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)
+![picture_3_6](resource\picture_3_6.png)
 
 Well, that's pretty cool, right? I think so. But what about if we want to create our own commands? How do we go about doing that? What plumbing do we need to do? Well, it kind of goes like this.
 
@@ -2349,7 +2351,7 @@ As previously stated, Commands also build upon the Routed strategy that we saw w
 
 OK, so as I've just stated, there are several steps required in creating and using your own `RoutedCommand`s. To aid with this process, the solution at the top of this article contains a project entitled "Part3_Using_Our_Own_Commands", which contains an implementation of rolling out your own `RoutedCommand`s. To better understand this demo project, let's consider the following diagram:
 
-![Image 7](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)
+![picture_3_7](resource\picture_3_7.png)
 
 As can be seen from this diagram, there are three different classes involved. So let's have a look at some code for each of these three classes now, shall we?
 
@@ -2517,11 +2519,11 @@ invokeProv.Invoke();
 
 I did say it was fairly obscure. For example, what is this `GetPattern` thing all about? Well, like I also said, there are many automation peers, all of which relate to different UI elements, so the `PatternInterface` enumeration contains values that are used across these different UI elements. For example, a `PatternInterface.Scroll` will most likely not be used with `Button`, but rather a scrollable control. The image below shows all the possible values for the `PatternInterface` enumeration:
 
-![Image 8](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)
+![picture_3_8](resource\picture_3_8.png)
 
 And this image displays some of the available automation peers, though I urge you to explore this further, as it's quite strange stuff.
 
-![Image 9](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)
+![picture_3_9](resource\picture_3_9.png)
 
 ## The Demo Apps
 
@@ -2579,7 +2581,7 @@ In this article, I'm aiming to cover a brief introduction into the following:
 
 ## The difference between CLR properties and Dependency Properties
 
-![Image 1](https://www.codeproject.com/KB/WPF/BeginWPF4/DpsVsCLRProps.png)
+![picture_4_1](resource\picture_4_1.png)
 
 **Note**: What I mean by this picture is that a CLR property is fairly cool, but is fairly weak when compared with the awesome might of the Hulk. My boss looked at this and went, "man Spiderman is cool and elegant, the Hulk is retarded and can't even speak and breaks stuff. Really bad analogy man". But I like it, so it stays. I hope you see what my point was. Anyways, I like the Hulk, he is well cool in my opinion. I mean, being able to smash a tank with your bear hands, I would call that elegant. Truly I would.
 
@@ -2693,11 +2695,11 @@ Now don't worry if you don't get some of these, we will be covering some of thes
 
 Using DPs, it is also possible to inherit values from a DP that is declared on a completely different element. In order to understand this a bit better, I have included in the attached demo application (at the top of this article) a project entitled "Using_Inhertied_DPs", which when run looks like the following image:
 
-![Image 2](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)
+![picture_4_2](resource\picture_4_2.png)
 
 And if you look at the XAML code (this is all the code there is for this project), we can see something like the following figure:
 
-![Image 3](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)
+![picture_4_3](resource\picture_4_3.png)
 
 So it can be seen that if we declare a `TextElement.FontSize` property at `Window` level, any `Control` that doesn't declare its own version of the `TextElement.FontSize` will inherit the `TextElement.FontSize` property value that is declared by the `Window`. But how can this be? `TextElement` isn't a `Window` or a `Label`, so how the heck does that all work? Well, the WPF property sub system is a tricky beast, and actually allows DPs to be declared in a manner which means they can actually be used on other classes that are not the same as where the DP is being declared. These are known as Attached Properties. Don't worry, we will be covering those in more detail in the [Attached Properties](https://www.codeproject.com/Articles/23537/WPF-A-Beginner-s-Guide-Part-4-of-n#APs) section.
 
@@ -2705,27 +2707,27 @@ So that's half the mystery solved, the `Window` class in this example is using a
 
 We will start out with the source of the `TextElement.FontSize` property, which is actually `System.Windows.Documents.TextElement` within *PresentationFramework.dll*. This is where the `FontSize` DP is first declared. Notice that it is declared as Attached. That means that other classes can now refer to this DP using the syntax `TextElement.FontSize`, even though they have nothing to do with the `TextElement` class.
 
-![Image 4](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)
+![picture_4_4](resource\picture_4_4.png)
 
-![Image 5](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)
+![picture_4_5](resource\picture_4_5.png)
 
 And if we check out the [MSDN page](http://msdn2.microsoft.com/en-us/library/system.windows.documents.textelement.fontsize.aspx) for the `TextElement.FontSize` property, we can see it's actually declared with the `Inherits` metadata, which allows controls that have this Attached Property used to inherit a value from further up the Visual Tree event if they do not declare a new value for this property.
 
-![Image 6](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)
+![picture_4_6](resource\picture_4_6.png)
 
 In order to understand this further, let's continue our investigation. We now know that the `TextElement` does indeed declare a DP called `FontSize`, and that this is an Attached Property, and that it's marked as `Inherits`. So what about controls that may use this Attached Property" Like `System.Windows.Controls.Label`, as in our example. Well, let's have a look, shall we?
 
 As it turns out, `System.Windows.Controls.Label` doesn't actually declare a DP for `FontSize`. We have to trawl the OO inheritance tree until we get to `System.Windows.Controls.Control`, which is where we find the declaration for `FontSize`. So let's see that.
 
-![Image 7](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)
+![picture_4_7](resource\picture_4_7.png)
 
-![Image 8](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)
+![picture_4_8](resource\picture_4_8.png)
 
 The reason that the third `System.Windows.Controls.Label` in the screenshot of the demo project has a different `FontSize` is that it opts out of the property inheritance (the one coming from the `TextElement.FontSize` property being set by `Window1`), by explicitly declaring its own value, therefore overriding the inherited value it would have received from `Window1`.
 
 So that's how the `TextElement.FontSize` property is implemented. But let's take a look at implementing our own inherited property. It just so happens that I have created another demo project, as part of the overall solution (available at the top of this article). The project is entitled "DP_Custom_Inherited_Properties", and when run, simply looks like this:
 
-![Image 9](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)
+![picture_4_9](resource\picture_4_9.png)
 
 Not that's exciting, right?
 
@@ -2991,11 +2993,11 @@ That's it. Shall we see some code? This is taken from the "Attached_Properties_D
 
 This is what it looks like with the Attached DP inactive (DP set to false):
 
-![Image 10](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)
+![picture_4_10](resource\picture_4_10.png)
 
 This is what it looks like with the Attached DP active (DP set to true):
 
-![Image 11](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)
+![picture_4_11](resource\picture_4_11.png)
 
 So here is the XAML markup:
 
@@ -3239,7 +3241,7 @@ The `FrameworkPropertyMetadata` class derives from `PropertyMetadata`, and for m
 
 But what does this class actually do for us? Well, the answer is that whenever we define Register/Add or Attach a `DependencyProperty`, we need to supply a `FrameworkPropertyMetadata` instance. By supplying a `FrameworkPropertyMetadata` instance, we are able to instruct the WPF property system to do special things with the DP that is using the `FrameworkPropertyMetadata`. For example, if we examine the constructors for the `FrameworkPropertyMetadata` class, it may become clearer as to its purpose in the scheme of the property system (sorry for the small image), but if you want a bigger picture, you can go to [the MSDN documentation](http://msdn2.microsoft.com/en-us/library/system.windows.frameworkpropertymetadata.frameworkpropertymetadata.aspx).
 
-![Image 12](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)
+![picture_4_12](resource\picture_4_12.png)
 
 So it can be seen that by using `FrameworkPropertyMetadata`, we are able to provide information to the property system such as:
 
@@ -3270,7 +3272,7 @@ Each of the three DPs check for validity, and the `CurrentReading` value is chec
 
 The demo application when run, looks as follows:
 
-![Image 13](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)
+![picture_4_13](resource\picture_4_13.png)
 
 ### Callbacks/Coerce, for when the DP changes
 
@@ -3481,7 +3483,7 @@ Well, basically, binding allows UI Elements to obtain their data either from oth
 
 A typical binding arrangement is as follows:
 
-![Image 1](https://www.codeproject.com/KB/WPF/BeginWPF5/bindOverview.png)
+![picture_5_1](resource\picture_5_1.png)
 
 Typically, each binding has these four components: a binding target object, a target property, a binding source, and a path to the value in the binding source to use.
 
@@ -3710,7 +3712,7 @@ When you set out to set up a Binding, there are several different things you nee
 
 Once you know or have considered all this, it's really as easy as ABC. As part of the demo solution, you will find a project entitled "BindingToUIElements" which, when run, will look like the following:
 
-![Image 2](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)
+![picture_5_2](resource\picture_5_2.png)
 
 This simple demo application shows three different Bindings going on. I will briefly discuss each of these now.
 
@@ -3811,7 +3813,7 @@ Either way, the normal proceeding is to use an `XmlDataProvider` within the XAML
 
 As part of the demo solution, you will find a project entitled "BindingToXML" which, when run, will look like the following:
 
-![Image 3](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)
+![picture_5_3](resource\picture_5_3.png)
 
 The top two sections of this demo app use XAML held XML data, and the bottom two use an external XML file.
 
@@ -3986,7 +3988,7 @@ Well, as luck would have it, these days, there is a nice `ObserverableCollection
 
 As part of the demo solution, you will find a project entitled "BindingToCollections" which, when run, will look like the following:
 
-![Image 4](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)
+![picture_5_4](resource\picture_5_4.png)
 
 So binding to such a collection becomes a snap. Here are two possible ways to do this using `ListBox`es:
 
@@ -4158,7 +4160,7 @@ I should point out that these examples are merely demonstrating how to Bind to c
 
 One other thing that I would like to bring your attention to is the rendering of the items within the `ListBox`. See how they simply show "BindingToCollection.Persons" as plain text.
 
-![Image 5](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)
+![picture_5_5](resource\picture_5_5.png)
 
 This is obviously not the desired effect, but happens because WPF does not know what properties to show and how they should be shown for a `Person` object. This will be the subject of my next article on Templates. I won't write any more about this, but just know that we can change the way a data item looks using a `DataTemplate`. If you really can't wait, you can have a look at these links:
 
@@ -4175,7 +4177,7 @@ ValueConverters are like the *sprintf* of the WPF world. You can use a ValueConv
 
 But more typically, you may use ValueConverters for small formatting changes.
 
-![Image 6](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)
+![picture_5_6](resource\picture_5_6.png)
 
 ValueConverters sit between the source value and the bound target property, and their sole purpose is to take a value and supply a different value.
 
@@ -4197,7 +4199,7 @@ So how do we use these ValueConverters in our code? Well, quite simply, we use t
 
 As part of the demo solution, you will find a project entitled "ValueConverters" which, when run, will look like the following:
 
-![Image 7](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)
+![picture_5_7](resource\picture_5_7.png)
 
 This small example actually uses two ValueConverters, the top one converts from words to a `Brush` that is used to color a `Rectangle`. The second value converter uses an explicitly set `DataContext` in the code-behind where two `Label`s have their `DataContext` set to a new `DateTime`. Let's see the code:
 
@@ -4505,7 +4507,7 @@ Luckily, Microsoft knew about this, and have equipped us with the necessary ammu
 
 As part of the demo solution, you will find a project entitled "Validation" which, when run, will look like the following:
 
-![Image 8](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)
+![picture_5_8](resource\picture_5_8.png)
 
 ### Visual Validation Changes
 
