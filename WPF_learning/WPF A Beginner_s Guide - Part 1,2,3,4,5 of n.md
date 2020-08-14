@@ -171,7 +171,7 @@ And in C#, it would be as follows:
     canv.Margin = new Thickness(0, 0, 0, 0);
     canv.Background = new SolidColorBrush(Colors.White);
     
-		//The Rectangle
+	//The Rectangle
     Rectangle r = new Rectangle();
     r.Fill = new SolidColorBrush(Colors.Blue);
     r.Stroke = new SolidColorBrush(Colors.Blue);
@@ -181,7 +181,7 @@ And in C#, it would be as follows:
     r.SetValue(Canvas.TopProperty, (double)122);
     canv.Children.Add(r);
     
-		//The Ellipse
+	//The Ellipse
     Ellipse el = new Ellipse();
     el.Fill = new SolidColorBrush(Colors.Green);
     el.Stroke = new SolidColorBrush(Colors.Green);
@@ -364,7 +364,7 @@ And in C#, this would be as follows:
     wp.Margin = new Thickness(0, 0, 0, 0);
     wp.Background = new SolidColorBrush(Colors.White);
     
-		//Add Rectangles
+	//Add Rectangles
     Rectangle r;
     for (int i = 0; i <= 10; i++)
     {
@@ -445,14 +445,13 @@ And in C#, this would be as follows:
 ```c#
     DockPanel dp = new DockPanel();
     dp.LastChildFill = true;
-    //this is the same as Width="Auto" in XAML, as long as its not applied
-    to a GridColumn Width/Height /GridRow Width/Height which has special classes
+    //this is the same as Width="Auto" in XAML, as long as its not applied to a GridColumn Width/Height /GridRow Width/Height which has special classes
     dp.Width = Double.NaN;
     dp.Height = Double.NaN;
     //add the WrapPanel as sole child of Window
     this.Content = dp;
     
-		//Add Rectangles
+	//Add Rectangles
     Rectangle rTop = new Rectangle();
     rTop.Fill = new SolidColorBrush(Colors.CornflowerBlue);
     rTop.Stroke = new SolidColorBrush(Colors.CornflowerBlue);
@@ -474,13 +473,13 @@ Whilst in VB.NET, this would be:
     dp.LastChildFill = True
     dp.Width = [Double].NaN
     
-		'this is the same as Width="Auto" in XAML
+	'this is the same as Width="Auto" in XAML
     dp.Height = [Double].NaN
     'this is the same as Height="Auto" in XAML
     'add the DockPanel as sole child of Window
     Me.Content = dp
     
-		'Add Rectangles
+	'Add Rectangles
     Dim rTop As New Rectangle()
     rTop.Fill = New SolidColorBrush(Colors.CornflowerBlue)
     rTop.Stroke = New SolidColorBrush(Colors.CornflowerBlue)
@@ -569,22 +568,22 @@ And in C#, this would be as follows:
     //add the Grid as sole child of Window
     this.Content = grid;
     
-		//col1
+	//col1
     ColumnDefinition cd1 = new ColumnDefinition();
     cd1.Width = new GridLength(40);
     grid.ColumnDefinitions.Add(cd1);
     
-		//col2
+	//col2
     ColumnDefinition cd2 = new ColumnDefinition();
     cd2.Width = new GridLength(1, GridUnitType.Star);
     grid.ColumnDefinitions.Add(cd2);
     
-		//col3
+	//col3
     ColumnDefinition cd3 = new ColumnDefinition();
     cd3.Width = new GridLength(2, GridUnitType.Star);
     grid.ColumnDefinitions.Add(cd3);
     
-		//Now add the cells to the grid
+	//Now add the cells to the grid
     Rectangle r1c1 = new Rectangle();
     r1c1.Fill = new SolidColorBrush(Colors.Aqua);
     r1c1.SetValue(Grid.ColumnProperty, 0);
@@ -673,13 +672,13 @@ In case you are wondering (lost **** it), here is how I did it (XAML only this t
         <Menu Width="Auto" Height="20"
             Background="#FFA9D1F4"
             DockPanel.Dock="Top">
-            <!\-\- File Menu -->
+            <!-- File Menu -->
             <MenuItem Header="File">
                 <MenuItem Header="Save"/>
                 <Separator/>
                 <MenuItem Header="Exit"/>
             </MenuItem>
-            <!\-\- About Menu -->
+            <!-- About Menu -->
             <MenuItem Header="Help">
                 <MenuItem Header="About"/>
             </MenuItem>
