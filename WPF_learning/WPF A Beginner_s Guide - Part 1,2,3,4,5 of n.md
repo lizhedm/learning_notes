@@ -509,7 +509,6 @@ The Grid control is by far the most sophisticated WPF layout control there is (a
 ```
 
 
-
 Where I have declared three Grid ColumnDefinition controls, where the first ColumnDefinition gets a fixed width of 40 pixels, and the remaining space is divided between the last two ColumnDefinition controls, where the last one gets twice as much as the second last one. This is the same principle for RowDefinition.
 
 In order for child controls of a Grid control to tell the WPF layout system which cell they belong to, we simply use the following Dependency/Attached Properties, which use a 0 based index.
