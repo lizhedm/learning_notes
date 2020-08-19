@@ -44,6 +44,20 @@ Margin：四个值的顺序，左开始，顺时针
 - HorizontalAlignment 内部元素水平方向上的对齐方式。value：Left，Center，Right，Stretch。
 - VerticalAlignment 内部元素竖直方向上的对齐方式。value：Top，Center，Bottom，Stretch。
 
+### Resource
+
+#### Dynamic Resources 和 Static Resource
+
+静态资源在第一次编译后即确定其对象或值，之后不能对其进行修改。动态资源则是在运行时决定，当运行过程中真正需要时，才到资源目标中查找其值。
+
+
+
+#### C#代码中使用资源
+
+- FindResource 查找资源
+- Resource.Add 增加资源
+- Resource.Remove 移除资源
+
 ## Other
 
 数据驱动UI: 传统的GUI界面都是由windows消息通过事件传递给程序，程序根据不同的操作来表达出不同的数据体现在UI界面上，这样数据在某种程度上来说，受到很大的限制。WPF中是数据驱动UI，数据是核心，处于主动的，UI从属于数据并表达数据，是被动的.

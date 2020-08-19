@@ -474,7 +474,11 @@ int unboxInt = (int) objBox;	//unboxing
 
 ### UIH C# 编码规范
 
+#### Code Review Example
 
+![](resource\code_review_1.png)
+
+![](resource\code_review_2.png)
 
 #### Reference
 
