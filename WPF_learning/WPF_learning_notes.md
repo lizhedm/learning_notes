@@ -10,8 +10,6 @@ Margin：四个值的顺序，左开始，顺时针
 
 泊靠式面板。内部元素可以选择泊靠方式。
 
-常用布局：menu在上，左右内容显示区域，底部一个状态显示栏。
-
 - DockPanel.Dock，value：Left/Right/Top/Bottom
 
 - LastChildFill=True 最后一个内容控件填充所有剩余部分
