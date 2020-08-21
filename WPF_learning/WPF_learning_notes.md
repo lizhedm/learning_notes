@@ -42,6 +42,21 @@ Margin：四个值的顺序，左开始，顺时针
 - HorizontalAlignment 内部元素水平方向上的对齐方式。value：Left，Center，Right，Stretch。
 - VerticalAlignment 内部元素竖直方向上的对齐方式。value：Top，Center，Bottom，Stretch。
 
+
+
+### TBD
+
+#### To do in XAML
+
+- 表示UI的markup
+- 需要的resource 文件 
+- 本地resource文件
+- Command Binding
+
+#### To do in Code
+
+
+
 ### Resource
 
 #### Dynamic Resources 和 Static Resource
