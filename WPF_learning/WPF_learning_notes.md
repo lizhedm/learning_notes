@@ -55,7 +55,9 @@ Margin：四个值的顺序，左开始，顺时针
 
 #### To do in Code
 
-
+- event handling
+- non-UI class methods
+- exception handling
 
 ### Resource
 
