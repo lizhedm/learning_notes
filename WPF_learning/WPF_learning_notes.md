@@ -1,4 +1,4 @@
-## WPF: A Beginner's Guide - Part 1，2,3,4,5 of n
+## WPF: A Beginner's Guide 
 
 ### Layout
 
@@ -72,6 +72,61 @@ Margin：四个值的顺序，左开始，顺时针
 - FindResource 查找资源
 - Resource.Add 增加资源
 - Resource.Remove 移除资源
+
+
+
+### RoutedEvents and RoutedCommands
+
+---
+
+#### WPF内置路由事件
+
+- 冒泡：由事件源向上传递一直到根元素
+
+- 直接：只有事件源才有机会响应事件
+
+- 隧道：从元素树的根部调用事件处理程序并依次向下深入直到事件源
+
+
+
+#### Command
+
+**命令(Command)**：实现了`ICommand`接口的类. 常用的即`RoutedCommand`
+
+**命令源(Command Source)**：命令的发送者，是实现了`ICommandSource`接口的类
+
+**命令目标(Command Target)**：命令发送给谁，命令作用在谁的身上。命令目标必须是实现了`IInputElement`接口的类
+
+**命令关联(Command Binding)**：负责把一些外围逻辑和命令关联起来，比如执行之前对命令是否可以执行进行判断、命令执行之后还有哪些后续工作等。
+
+
+
+### Dependency Property
+
+依赖属性（Dependency Property）: 自己没有值，能通过Binding从数据源获得值（依赖在别人身上）的属性，用于依赖属性的对象被称为依赖对象
+
+依赖对象 : WPF允许对象在创建时，不包含各个字段所占用的空间，而在使用这个字段时通过其他对象的数据或者实时分配空间，这种对象就是依赖对象
+
+### Binding
+
+---
+
+![picture_5_1](resource\picture_5_1.png)
+
+four components:
+
+- a binding target object, 绑定目标对象
+- a **target property**, 绑定目标属性
+- a binding source, 绑定源
+- a path to the value in the binding source to use, 路径
+
+**target property** 必须是依赖属性 `Dependency Property`
+
+WPF的Binding中`Path`必须是CLR属性
+
+
+
+
 
 ## Other
 

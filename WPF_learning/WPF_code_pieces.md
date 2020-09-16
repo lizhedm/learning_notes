@@ -85,3 +85,59 @@ List<T> FindVisualChild<T>(DependencyObject obj) where T : DependencyObject
 ```
 
 > reference: LinkSettingDemo
+
+
+
+### 算法
+
+#### 集合中删除和复原添加回连续的子集
+
+```c#
+Collection2.ForEach(item =>
+            {
+                if (item.Category == categoty && item.Level == BrainRegionLevel.SecondLevel && item.IsSearchHit)
+                {
+                    item.IsShow = isShow;
+                }
+            });
+if (!isShow)
+            {
+    			//	delete
+                for(int index = Collection1.Count -1; index > 0; index--)
+                {
+                    if (!Collection1[index].IsShow)
+                    {
+                        Collection1.RemoveAt(index);
+                    }
+                }
+            }
+            else
+            {
+                //	insert
+                int count = Collection2.Count;
+                for (int index2 = 0,index1 = 0;index2 < count && index1 < count; index2++)
+                {
+                    if (index1 >= Collection1.Count)
+                    {
+                        if (Collection2[index2].IsShow)
+                        {
+                            Collection1.Insert(indindex1ex, Collection2[index2]);
+                            index1++;
+                        }
+                        continue;
+                    }
+                    if (Collection2[index2] == Collection1[index1])
+                    {
+                        index1++;
+                        continue;
+                    }
+                    if (Collection2[index2].IsShow)
+                    {
+                        Collection1.Insert(index, Collection2[index2]);
+                        index1++;
+                    }
+                }
+            }
+```
+
+> reference McsfBrainAnalysis

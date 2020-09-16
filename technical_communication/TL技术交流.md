@@ -21,7 +21,7 @@
 
 首先介绍一下脑区编辑滚动条长短不一致DIM
 
-![img](C:\Users\ZHE~1.LI0\AppData\Local\Temp\企业微信截图_15998869887367.png)
+![08-13~09-13_1](image\08-13~09-13_1.png)
 
 当折叠选项框中的选项后，使用滚动条向下滚动页面时，滚动条的长度会出现长短不一致的变化。观察折叠一个二级选项、折叠多个二级选项和不折叠二级选项时滚动条长短的变化情况以及分析设计的逻辑，可以猜测负责设置滚动条长短的属性是和总的选项框集合的`count`绑定的，因此当折叠或者打开二级选项时，集合的`count`会对应变小和变大，滚动条的长度也应该对应的变大和变小。
 
@@ -43,7 +43,7 @@
 
 进代码看类的继承关系，果然`ObservableCollection`继承自`Collection`并实现了`INotifyCollectionChanged`接口中的相关函数。
 
-![img](C:\Users\ZHE~1.LI0\AppData\Local\Temp\企业微信截图_15998996244898.png)
+![08-13~09-13_2](image\08-13~09-13_2.png)
 
 当 `ObservableCollection`实例中的数据变化时，通过RaisePropertyChanged("Property");来通知UI更新数据。显然这是`List`做不到的。
 
@@ -97,6 +97,10 @@ snoop也能够将控件的树形结构展开，方便一些UI嵌套问题中，�
 |  3   |                      |      |
 |  4   |                      |      |
 
+
+
+---
+
 ###### 1. 前后端通信方法
 
 这是在首次做新功能方面的工作时涉及到的知识点，具体功能是：`Design_Func_MR_Brain Analysis_导出分割结果`。需要实现的是前端UI添加一个`Button`，点击`Button`后将脑分析`mask`数据以字节流的方式存储进磁盘。
@@ -121,7 +125,13 @@ snoop也能够将控件的树形结构展开，方便一些UI嵌套问题中，�
 
 
 
+前端配置文件加载关系如图：
 
+![09-13~10-13_1](image\09-13~10-13_1.png)
+
+前后端通过`operation`通信方式：
+
+![09-13~10-13_2](D:\Git\learning_notes\technical_communication\image\09-13~10-13_2.png)
 
 ---
 
