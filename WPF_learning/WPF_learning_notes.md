@@ -113,7 +113,7 @@ Margin：四个值的顺序，左开始，顺时针
 
 ![picture_5_1](resource\picture_5_1.png)
 
-four components:
+**four components:**
 
 - a binding target object, 绑定目标对象
 - a **target property**, 绑定目标属性
@@ -123,6 +123,56 @@ four components:
 **target property** 必须是依赖属性 `Dependency Property`
 
 WPF的Binding中`Path`必须是CLR属性
+
+
+
+**Binding.Mode：**
+
+- `OneWay` : `source property`改变  —> `target property`改变,`target property`改变 —> `source property`不改变，适用于只读的control
+- `TwoWay` ：`source property`和 `target property`双向改变，适用于可编辑和交互的UI
+- `OneTime` `source property`初始化 `target property`，后续更改不会传播
+- `OneWayToSource` ：`OneWay`的反向属性
+- `Default` 
+
+source must implement a suitable property change notification mechanism such as `INotifyPropertyChanged`
+
+
+
+**Binding.UpdateSourceTrigger：**
+
+`UpdateSourceTrigger` property of the binding determines what triggers the update of the source.
+
+| UpdateSourceTrigger value                | When the Source Value Gets Updated        |
+| ---------------------------------------- | ----------------------------------------- |
+| `LostFocus` (default for `TextBox.Text`) | When the `TextBox` control loses focus    |
+| `PropertyChanged`                        | As you type into the `TextBox`            |
+| `Explicit`                               | When the application calls `UpdateSource` |
+
+
+
+**Databinding Syntax:**
+
+```xaml
+<TextBox x:Name="txtSource" Width="150" Height="30"/>
+<TextBox Width="150" Height="30" Text="{Binding ElementName=txtSource, 
+    Path=Text, Mode=TwoWay, UpdateSourceTrigger=LostFocus }"/>
+```
+
+```xaml
+<TextBox Width="150" Height="30" Text="{Binding Text}"/>
+```
+
+
+
+ `Binding` was a markup `MarkupExtension`. XAML parser knows how to treat the { } sections
+
+```xaml
+<Button Margin="10,0,0,0" Content="Im bound to btnSource, using long Binding syntax">
+    <Button.Background>
+        <Binding ElementName="btnSource" Path="Background"/>
+    </Button.Background>
+</Button>
+```
 
 
 
