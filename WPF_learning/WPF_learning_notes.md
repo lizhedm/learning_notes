@@ -176,6 +176,20 @@ source must implement a suitable property change notification mechanism such as 
 
 
 
+### Code Behind
+
+代码与页面分离
+
+
+
+### control template
+
+specify the appearance of a control
+
+### data template 
+
+specify the appearance of a control's content.
+
 
 
 ## Other
